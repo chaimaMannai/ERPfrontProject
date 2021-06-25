@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <section class="content">
+            <div class="card">
+              
+             
+              <div class="form-group col-md-6 offset-md-3">
+                <label>Provider Username :</label>
+  
+  <input #in type="text" class="form-control" (keyup)="searchPerson(in.value)" placeholder="search client by username" >
+  <button type="button" class="btn btn-success">
+    <i class="fa fa-search"></i>
+   
+  </button>
+  <ol>
+      
+    {{filtredProvider.username}}      
+         
+         
+      
+     
+  </ol>
+  </div>
+  
+  
+   
+      <div class="form-group col-md-6 offset-md-3">
+        <label >invoice number</label>
+        <input type="number" class="form-control" [(ngModel)]="invoiceNumber"> 
+        </div>
+        <br>
+        <br>
+    
+        <div>
+       
+          <button  class="btn btn-info" type="submit" style="float: right" (click)="onSubmit()" >Save</button>
+          <button class="btn btn-dark"  style="float: right" (click)="goToList()">Back</button>
+        
+      </div>
+      
+  
+      
+     
+      </div>
+      </section>
+    </div>
+    </div>

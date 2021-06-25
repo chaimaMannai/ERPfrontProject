@@ -1,0 +1,49 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <section class="content">
+            <div class="card">
+              
+             
+              <div class="form-group col-md-6 offset-md-3">
+                <label>number :</label>
+  
+  <input #in type="text" class="form-control"  (keyup)="searchInvoice(in.value)" placeholder="enter invoice number" >
+  
+    <i class="fa fa-search"></i>
+   
+  
+  <ol>
+      
+    {{filtredInvoice.number}}      
+         
+         
+      
+     
+  </ol>
+</div>
+  <div class="form-group col-md-6 offset-md-3">
+    <label >Mode</label>
+    <input type="text" class="form-control" [(ngModel)]="modepayment"> 
+    </div>
+    <br>
+    <br>
+
+    <div class="form-group col-md-6 offset-md-3">
+        <label >Monatant</label>
+        <input type="number" class="form-control" [(ngModel)]="montantPayment"> 
+        </div>
+    <br>
+    <br>
+
+    <div>
+      <button  class="btn btn-info" type="submit" style="float: right" (click)="onSubmit()"><a style="color:#ffffff" routerLink="/Payments" routerLinkActive= "active">Save</a></button>
+      <button class="btn btn-dark"  style="float: right" (click)="goToList()">Back</button>
+    </div>
+
+
+  
+  </div>
+  </section>
+  </div>
+  </div>
+  

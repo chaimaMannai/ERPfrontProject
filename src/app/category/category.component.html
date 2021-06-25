@@ -1,0 +1,66 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <section class="content">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">List Of products</h3>
+                  
+       
+
+    
+        <br>
+        <br>
+        <br>
+        
+        <table mat-table *ngIf= "!showForm" [dataSource]="products" class="table table-hover" >
+       
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Product </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+              
+
+              <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef> Category </th>
+                <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="quantite">
+                <th mat-header-cell *matHeaderCellDef> quantite </th>
+                <td mat-cell *matCellDef="let element"> {{element.quantite}} </td>
+              </ng-container>
+
+             
+
+          
+
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+         
+          
+          
+
+            
+
+                   
+                     
+                   
+
+                    
+</div>
+</div>
+</section>
+
+
+         
+      
+    </div>
+</div>

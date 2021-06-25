@@ -1,0 +1,108 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <section class="content">
+            <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">List Of linesBuys</h3>
+
+
+                   
+                  <button [disabled]="actionDisabled" class="btn btn-success btn-sm " data-toggle="tooltip" data-placement="top"  style="float: right;" (click)="redirecttoline()"><i class="fa fa-plus-circle"></i> Add new LineBuy</button>
+
+        
+        <br>
+        <br>
+        <br>
+        
+        <table mat-table [dataSource]="lineBuys" class="table table-hover" >
+       
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+
+            <ng-container matColumnDef="Qt">
+              <th mat-header-cell *matHeaderCellDef> Qauntite </th>
+              <td mat-cell *matCellDef="let element"> {{element.qt}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef> description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="PurchaseOrder">
+                <th mat-header-cell *matHeaderCellDef> PurchaseOrder </th>
+                <td mat-cell *matCellDef="let element"> {{element.purchaseOrder.number}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="product">
+                <th mat-header-cell *matHeaderCellDef> Product </th>
+                <td mat-cell *matCellDef="let element"> {{element.product.name}} </td>
+              </ng-container>
+
+             
+              
+              <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element"> 
+
+                  <div  class="btn-group-sm align-content-sm-center">
+                
+                    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteLineBuy(element.id)"><i class="fa fa-trash" style="color:#ffffff"></i></button>
+
+                </div>
+              </ng-container>
+          
+              
+
+          
+
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          
+          <br>
+          <br>
+
+          <div>
+            <button [disabled]="actionDisabled" class="btn btn-dark"  style="float: right" (click)="deleteOrdersaleNonValid()">Cancel</button>
+        </div>
+          
+          <div>
+              
+           
+            <button [disabled]="actionDisabled" class="btn btn-info" type="submit" style="float: right" (click)="getValidPurchaseOrder()">Validate</button>
+          </div>
+
+
+
+            
+         
+          
+         
+         
+          
+          
+
+            
+
+                    
+
+
+
+                          
+                      
+                    
+</div>
+</div>
+</section>
+
+
+         
+      
+    </div>
+</div>

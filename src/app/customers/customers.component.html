@@ -1,0 +1,67 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <section class="content">
+            <div class="card">
+                <div class="card-header">
+        
+        <h2>List of Customers</h2>
+
+
+        <button routerLink="/create-customer" class="btn btn-success" data-toggle="tooltip" data-placement="top"  style="float: right;" routerLinkActive="active" title="Add New customer"><i class="fa fa-plus-circle"></i>
+            Add new Customer
+        </button>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="panel-body">
+            <table id="tableCustomer" class="table table-striped"  cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>PhoneNumber</th>
+                    <th>Address</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tr *ngFor="let i of customers">
+                        <td>{{i.username}} </td>
+                        <td>{{i.firstName}} </td>
+                        <td>{{i.lastName}} </td>
+                        <td>{{i.email}} </td>
+                        <td>{{i.phoneNumber}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.type}}</td>
+                        <td>
+                            <!--<button style='margin-right:16px' (click)="updateCustomer(i.id)" 
+                            class="btn btn-info" style="margin-left: 10px">Edit</button>-->
+                            
+                            <button class="btn btn-info btn-sm rounded-0" (click)="updateCustomer(i.id)" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-danger btn-sm rounded-0"(click)="deleteCustomer(i.id)"
+                             type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+
+                        </td>
+                    </tr>
+                    </table>
+                    </div>
+                   
+
+                    
+
+
+         
+      
+                </div>
+            </div>
+            </section>
+            
+            
+                     
+                  
+                </div>
+            </div>

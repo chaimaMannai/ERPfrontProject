@@ -1,0 +1,36 @@
+
+table {
+    width: 100%;
+  }
+  th {
+    
+    padding: 10px; font-style: normal;
+  font-size: large;
+ color: white;
+background-color: #00bcd4;}
+
+ .icon{
+   cursor: pointer;
+ }   
+
+ #icon-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid lightgrey;
+}
+
+.preview-button >>> .ui-dropdown {
+  height: 36px;
+  font-family: Lato-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #cccccc;
+  border-radius: 4px !important;
+  border: solid 2px #cccccc;
+  background-color: #fff;
+}

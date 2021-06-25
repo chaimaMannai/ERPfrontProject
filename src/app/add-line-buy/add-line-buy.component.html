@@ -1,0 +1,56 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <section class="content">
+            <div class="card">
+              
+             
+              <div class="form-group col-md-6 offset-md-3">
+                <label>product :</label>
+  
+  <input #in type="text" class="form-control"  (keyup)="searchProduct(in.value)" placeholder="search product by name" >
+  
+    <i class="fa fa-search"></i>
+   
+  
+  <ol>
+      
+    {{filtredProduct.name}}      
+         
+         
+      
+     
+  </ol>
+  </div>
+  
+  
+   
+      <div class="form-group col-md-6 offset-md-3">
+        <label >Quantite</label>
+        <input type="number" class="form-control" [(ngModel)]="quantite"> 
+        </div>
+        <br>
+        <br>
+    
+        <div>
+       
+          <button  class="btn btn-info" type="submit" style="float: right" (click)="onSubmit()" >Save</button>
+          <button class="btn btn-dark"  style="float: right" (click)="goToList()">Back</button>
+        
+      </div>
+      
+  
+      
+     
+      </div>
+      </section>
+    </div>
+    </div>
+    
+   
+  
+    
+     
+  
+  
+
